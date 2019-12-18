@@ -7,16 +7,29 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/styles'
+import Fab from '@material-ui/core/Fab';
 
 const useStyles = makeStyles({
     text: {
         fontFamily: 'Poppins',
         display: 'flex'
+    },
+    link: {
+        fontFamily: 'Poppins'
     }
 })
 
 const Header = ()=> {
     const classes = useStyles();
+    const preventDefault = event => event.preventDefault();
+    const navigate = [
+        { name : "Home", to: "home" },
+        { name : "Academics", to: "academics" },
+        { name : "News", to: "news" },
+        { name : "Events", to: "events" },
+        { name : "School life", to: "school" },
+        { name : "Contact", to: "contact" }
+    ]
     return (
         <Fragment>
             <header>
@@ -41,6 +54,38 @@ const Header = ()=> {
                             </Button>
                         </Grid>
                     </Grid>
+                </Container>
+                <Container maxWidth="lg" >
+                    <Grid container justify="space-between" >
+
+                        <Grid item  md={2} >
+                            <Typography>
+                                <Box fontSize={30} fontWeight={600} > Ivy School</Box>
+                            </Typography>
+                        </Grid>
+
+
+                        <Grid item container  justify="flex-end" alignItems="center" md={10} >
+                            {
+                                navigate.map((item)=> {
+                                    return (
+                                        <Grid item  md={1} >
+                                            <Typography>
+                                                <Box fontSize={16} fontWeight={300}>
+                                                    <Link  href="#" onClick={preventDefault}> { item.name } </Link>
+                                                </Box>
+                                            </Typography>
+                                        </Grid>
+                                    )
+                                })
+                            }
+                            <Grid  item md={2} >
+                                <Fab variant="extended" size="medium" color="primary" >Apply Now</Fab>
+                            </Grid>
+                        </Grid>
+                      
+                    </Grid>
+
                 </Container>
             </header>
         </Fragment>
