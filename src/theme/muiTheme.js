@@ -17,8 +17,21 @@ const theme = createMuiTheme({
     overrides: {
         MuiCssBaseline: {
             '@global' : {
-                '@font-face': Poppins
+                '@font-face': 'Poppins'
             }
+        }
+    },
+    palette: {
+        primary: {
+            light: '#63ccff',
+            main: '#3AC569',
+            dark: '#006db3',
+            contrastText: '#fff',
+        },
+        secondary: {
+            main: '#ff00a6'
         }
     }
 })
+
+export default theme;

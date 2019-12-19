@@ -33,7 +33,7 @@ const Header = ()=> {
     return (
         <Fragment>
             <header>
-                <Container maxWidth="lg" >
+                <Container maxWidth="xl" >
                     <Grid container justify="space-between" >
                         <Grid item md={5} container alignItems="center" >
                             <Typography  className={ classes.text } >
@@ -55,7 +55,7 @@ const Header = ()=> {
                         </Grid>
                     </Grid>
                 </Container>
-                <Container maxWidth="lg" >
+                <Container maxWidth="xl" >
                     <Grid container justify="space-between" >
 
                         <Grid item  md={2} >
@@ -80,7 +80,11 @@ const Header = ()=> {
                                 })
                             }
                             <Grid  item md={2} >
-                                <Fab variant="extended" size="medium" color="primary" >Apply Now</Fab>
+                                <Fab variant="extended" size="medium" color="primary" >
+                                    <Typography>
+                                        <Box fontSize={14} fontWeight={300}> Apply Now </Box>
+                                    </Typography>
+                                </Fab>
                             </Grid>
                         </Grid>
                       
