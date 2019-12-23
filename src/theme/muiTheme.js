@@ -13,6 +13,12 @@ const theme = createMuiTheme({
     },
     typography: {
         fontFamily: 'Poppins !important',
+        h6: {
+            fontWeight : 600
+        },
+        caption: {
+            display: 'block'
+        }
     },
     overrides: {
         MuiCssBaseline: {

@@ -13,19 +13,6 @@ const useStyles = makeStyles({
         background : "#333556"
     },
     containericon: {
-        '&::before' : {
-            content: " '' ",
-            position: "absolute",
-            width: 80,
-            height: 80,
-            display: "block",
-            background: "#464865",
-            left: -19,
-            right: 0,
-            top: -19,
-            bottom: 0,
-            borderRadius: 80
-        }
     },
     icon : {
         width: 40,

@@ -13,6 +13,7 @@ import {
         CardContent
 } from '@material-ui/core';
 import Programbar from '../components/home/program-bar'
+import LatestNews from '../components/home/latest-news'
 import { makeStyles } from '@material-ui/styles'
 
 
@@ -39,7 +40,9 @@ const useStyles = makeStyles({
     containerAbsolute: {
         position: 'absolute',
         top: '50%',
-        transform: 'translateY(-50%)'
+        transform: 'translateY(-50%)',
+        left: 0,
+        right: 0
     }
 })
 
@@ -64,7 +67,8 @@ const IndexPage = () => {
                     </CardContent>
                 </Container>
             </Box>
-            <Programbar />  
+            <Programbar />
+            <LatestNews /> 
         </Layout>
     )
 }
