@@ -8,6 +8,12 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/styles'
 import Fab from '@material-ui/core/Fab';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import {
+    Slide
+} from '@material-ui/core';
 
 const useStyles = makeStyles({
     text: {
@@ -16,11 +22,18 @@ const useStyles = makeStyles({
     },
     link: {
         fontFamily: 'Poppins'
+    },
+    header: {
+        backgroundColor: "transparent"
+    },
+    callaction: {
+        background: "#3AC569"
     }
 })
 
 const Header = ()=> {
     const classes = useStyles();
+    const trigger = useScrollTrigger();
     const preventDefault = event => event.preventDefault();
     const navigate = [
         { name : "Home", to: "home" },
@@ -32,66 +45,81 @@ const Header = ()=> {
     ]
     return (
         <Fragment>
-            <header>
-                <Container maxWidth="xl" >
-                    <Grid container justify="space-between" >
-                        <Grid item md={5} container alignItems="center" >
-                            <Typography  className={ classes.text } >
-                                <Box fontSize={14} fontWeight={300}>Need Help? Call us now</Box>
-                                <Box fontSize={14} fontWeight={300}>(+88)12 345 6789</Box>
-                                <Box ml={2} fontSize={14} fontWeight={300}>hello@eduma.com</Box>
-                            </Typography>
-                        </Grid>
-                        <Grid item md={3} container justify="flex-end" >
-                            <Button>
-                                <Box fontSize={14} fontWeight={300}>Alumno</Box>
-                            </Button>
-                            <Button>
-                                <Box fontSize={14} fontWeight={300}>Profesor</Box>
-                            </Button>
-                            <Button>
-                                <Box fontSize={14} fontWeight={300}>Padres</Box>
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </Container>
-                <Container maxWidth="xl" >
-                    <Grid container justify="space-between" >
+            <AppBar className={ classes.header } >
+                <Toolbar disableGutters  className={ !trigger ? classes.top : classes.notop  } >
+                    <Box width="100%"  display="flex"  flexDirection="column" >
+                        <Slide in={!trigger} >
+                            <Box   className={ classes.callaction } backgroundColor="#3AC569" >
 
-                        <Grid item  md={2} >
-                            <Typography>
-                                <Box fontSize={30} fontWeight={600} > Ivy School</Box>
-                            </Typography>
-                        </Grid>
-
-
-                        <Grid item container  justify="flex-end" alignItems="center" md={10} >
-                            {
-                                navigate.map((item)=> {
-                                    return (
-                                        <Grid item  md={1} >
-                                            <Typography>
-                                                <Box fontSize={16} fontWeight={300}>
-                                                    <Link  href="#" onClick={preventDefault}> { item.name } </Link>
-                                                </Box>
+                                <Container maxWidth="xl">
+                                    <Grid container justify="space-between">
+                                        <Grid item md={5} container alignItems="center" >
+                                            <Typography  className={ classes.text } >
+                                                <Box fontSize={14} fontWeight={300}>Need Help? Call us now</Box>
+                                                <Box fontSize={14} fontWeight={300}>(+88)12 345 6789</Box>
+                                                <Box ml={2} fontSize={14} fontWeight={300}>hello@eduma.com</Box>
                                             </Typography>
                                         </Grid>
-                                    )
-                                })
-                            }
-                            <Grid  item md={2} >
-                                <Fab variant="extended" size="medium" color="primary" >
-                                    <Typography>
-                                        <Box fontSize={14} fontWeight={300}> Apply Now </Box>
-                                    </Typography>
-                                </Fab>
-                            </Grid>
-                        </Grid>
-                      
-                    </Grid>
+                                        <Grid item md={3} container justify="flex-end" >
+                                            <Button>
+                                                <Box fontSize={14} fontWeight={300}>Alumno</Box>
+                                            </Button>
+                                            <Button>
+                                                <Box fontSize={14} fontWeight={300}>Profesor</Box>
+                                            </Button>
+                                            <Button>
+                                                <Box fontSize={14} fontWeight={300}>Padres</Box>
+                                            </Button>
+                                        </Grid>
+                                    </Grid>
+                                </Container>
 
-                </Container>
-            </header>
+                            </Box>
+                        </Slide>
+                        
+                        
+                        <Box>
+                            <Container maxWidth="xl">
+                                <Grid container justify="space-between">
+
+                                    <Grid item  md={2} >
+                                        <Typography>
+                                            <Box fontSize={30} fontWeight={600} > Ivy School</Box>
+                                        </Typography>
+                                    </Grid>
+
+
+                                    <Grid item container  justify="flex-end" alignItems="center" md={10} >
+                                        {
+                                            navigate.map((item)=> {
+                                                return (
+                                                    <Grid item  md={1} >
+                                                        <Typography>
+                                                            <Box fontSize={16} fontWeight={300}>
+                                                                <Link  href="#" onClick={preventDefault}> { item.name } </Link>
+                                                            </Box>
+                                                        </Typography>
+                                                    </Grid>
+                                                )
+                                            })
+                                        }
+                                        <Grid  item md={2} >
+                                            <Fab variant="extended" size="medium" color="primary" >
+                                                <Typography>
+                                                    <Box fontSize={14} fontWeight={300}> Apply Now </Box>
+                                                </Typography>
+                                            </Fab>
+                                        </Grid>
+                                    </Grid>
+                                
+                                </Grid>
+
+                            </Container>
+                        </Box>
+
+                    </Box>
+                </Toolbar>
+            </AppBar>
         </Fragment>
     )
 } 

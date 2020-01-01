@@ -14,6 +14,7 @@ import {
 } from '@material-ui/core';
 import Programbar from '../components/home/program-bar'
 import LatestNews from '../components/home/latest-news'
+import OpenDay from '../components/home/open-day'
 import { makeStyles } from '@material-ui/styles'
 
 
@@ -69,6 +70,7 @@ const IndexPage = () => {
             </Box>
             <Programbar />
             <LatestNews /> 
+            <OpenDay />
         </Layout>
     )
 }
