@@ -21,13 +21,11 @@ const useStyles = makeStyles({
         display: 'flex'
     },
     link: {
-        fontFamily: 'Poppins'
+        color: '#fff',
+        textDecoration: 'none'
     },
     header: {
         backgroundColor: "transparent"
-    },
-    callaction: {
-        background: "#3AC569"
     }
 })
 
@@ -45,40 +43,39 @@ const Header = ()=> {
     ]
     return (
         <Fragment>
-            <AppBar className={ classes.header } >
-                <Toolbar disableGutters  className={ !trigger ? classes.top : classes.notop  } >
+            <AppBar elevation={0} className={ classes.header } >
+                <Toolbar  disableGutters  className={ !trigger ? classes.top : classes.notop  } >
                     <Box width="100%"  display="flex"  flexDirection="column" >
-                        <Slide in={!trigger} >
-                            <Box   className={ classes.callaction } backgroundColor="#3AC569" >
-                                
-                                <Container maxWidth="xl">
-                                    <Grid container justify="space-between">
-                                        <Grid item md={5} container alignItems="center" >
-                                            <Typography  className={ classes.text } >
-                                                <Box fontSize={14} fontWeight={300}>Need Help? Call us now</Box>
-                                                <Box fontSize={14} fontWeight={300}>(+88)12 345 6789</Box>
-                                                <Box ml={2} fontSize={14} fontWeight={300}>hello@eduma.com</Box>
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item md={3} container justify="flex-end" >
-                                            <Button>
-                                                <Box fontSize={14} fontWeight={300}>Alumno</Box>
-                                            </Button>
-                                            <Button>
-                                                <Box fontSize={14} fontWeight={300}>Profesor</Box>
-                                            </Button>
-                                            <Button>
-                                                <Box fontSize={14} fontWeight={300}>Padres</Box>
-                                            </Button>
-                                        </Grid>
-                                    </Grid>
-                                </Container>
 
-                            </Box>
-                        </Slide>
+                        <Box   className={ classes.callaction } backgroundColor="#3AC569" >
+                            
+                            <Container maxWidth="xl">
+                                <Grid container justify="space-between">
+                                    <Grid item md={5} container alignItems="center" >
+                                        <Typography  className={ classes.text } >
+                                            <Box fontSize={14} fontWeight={300}>Need Help? Call us now</Box>
+                                            <Box fontSize={14} fontWeight={300}>(+88)12 345 6789</Box>
+                                            <Box color="#e0e0e0"  ml={2} fontSize={14} fontWeight={300}>hello@eduma.com</Box>
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item md={3} container justify="flex-end" >
+                                        <Button>
+                                            <Box color="#e0e0e0" fontSize={14} fontWeight={300}>Alumno</Box>
+                                        </Button>
+                                        <Button>
+                                            <Box color="#e0e0e0" fontSize={14} fontWeight={300}>Profesor</Box>
+                                        </Button>
+                                        <Button>
+                                            <Box color="#e0e0e0"fontSize={14} fontWeight={300}>Padres</Box>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Container>
+
+                        </Box>
                         
                         
-                        <Box>
+                        <Box  mt={3} >
                             <Container maxWidth="xl">
                                 <Grid container justify="space-between">
 
@@ -89,28 +86,32 @@ const Header = ()=> {
                                     </Grid>
 
 
-                                    <Grid item container  justify="flex-end" alignItems="center" md={10} >
-                                        {
-                                            navigate.map((item)=> {
-                                                return (
-                                                    <Grid item  md={1} >
-                                                        <Typography>
-                                                            <Box fontSize={16} fontWeight={300}>
-                                                                <Link  href="#" onClick={preventDefault}> { item.name } </Link>
-                                                            </Box>
-                                                        </Typography>
-                                                    </Grid>
-                                                )
-                                            })
-                                        }
-                                        <Grid  item md={2} >
+                                    <Grid item md={10} >
+
+                                        <Box display="flex" justifyContent="flex-end"  alignItems="center"  >
+                                            {
+                                                navigate.map((item)=> {
+                                                    return (
+                                                        <Box mr={ 5  } >
+                                                            <Typography>
+                                                                <Box color="#fff" fontSize={16} fontWeight={300}>
+                                                                    <Link  className={ classes.link } href="#" onClick={preventDefault}> { item.name } </Link>
+                                                                </Box>
+                                                            </Typography>
+                                                        </Box>
+                                                    )
+                                                })
+                                            }
+
                                             <Fab variant="extended" size="medium" color="primary" >
                                                 <Typography>
                                                     <Box fontSize={14} fontWeight={300}> Apply Now </Box>
                                                 </Typography>
                                             </Fab>
-                                        </Grid>
+                                        </Box>
+
                                     </Grid>
+
                                 
                                 </Grid>
 

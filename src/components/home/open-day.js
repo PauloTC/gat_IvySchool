@@ -11,12 +11,9 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles'
 import Check from  '../../assets/select.svg'
-import image from '../../images/openday.jpg'
+import image from '../../images/students.jpeg'
 
 const useStyles = makeStyles({
-    container : {
-        background: "#3b3b3b"
-    },
     blue: {
         background: "#31335D"
     },
@@ -26,6 +23,27 @@ const useStyles = makeStyles({
     icon : {
         width: 15,
         height: 15
+    },
+    image: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
+        height: 525,
+        zIndex: -1,
+        "&::before" : {
+            content: " ' ' ",
+            background: '#000',
+            width: '100%',
+            height: '100%',
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            display: 'block',
+            opacity: 0.5
+        }
     }
 })
 
@@ -58,13 +76,13 @@ const OpenDay = () => {
 
     return (
         <Box position="relative" mb={30} pb={ 40 } pt={ 8 } className= { classes.container } >
-            {/* <CardMedia  image={  image }  /> */}
+            <CardMedia className={ classes.image }  image={  image }  />
             <Container maxWidth="xl" >
                 <Typography variant="body2" >
                     <Box textAlign="center" color="#fff" >Our Goals</Box>
                 </Typography>
                 <Typography  variant="h5" >
-                     <Box fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
+                     <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
                 </Typography>
                 <Grid container  justify="space-around" >
                     {
