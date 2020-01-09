@@ -50,7 +50,7 @@ const Header = ()=> {
                     <Box width="100%"  display="flex"  flexDirection="column" >
                         <Slide in={!trigger} >
                             <Box   className={ classes.callaction } backgroundColor="#3AC569" >
-
+                                
                                 <Container maxWidth="xl">
                                     <Grid container justify="space-between">
                                         <Grid item md={5} container alignItems="center" >

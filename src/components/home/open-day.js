@@ -11,6 +11,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles'
 import Check from  '../../assets/select.svg'
+import image from '../../images/openday.jpg'
 
 const useStyles = makeStyles({
     container : {
@@ -57,6 +58,7 @@ const OpenDay = () => {
 
     return (
         <Box position="relative" mb={30} pb={ 40 } pt={ 8 } className= { classes.container } >
+            {/* <CardMedia  image={  image }  /> */}
             <Container maxWidth="xl" >
                 <Typography variant="body2" >
                     <Box textAlign="center" color="#fff" >Our Goals</Box>
@@ -80,7 +82,7 @@ const OpenDay = () => {
                         } )
                     }
                 </Grid>
-                <Box maxWidth={1350}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
+                <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
                     <Grid container >
 
                         <Grid className={ classes.blue } item md={4} >
