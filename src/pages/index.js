@@ -16,6 +16,7 @@ import Programbar from '../components/home/program-bar'
 import LatestNews from '../components/home/latest-news'
 import OpenDay from '../components/home/open-day'
 import CourseCollection from '../components/home/course-collection'
+import OpenAdmision from '../components/home/open-admision'
 
 import { makeStyles } from '@material-ui/styles'
 
@@ -74,6 +75,7 @@ const IndexPage = () => {
             <LatestNews /> 
             <OpenDay />
             <CourseCollection />
+            <OpenAdmision />
         </Layout>
     )
 }
