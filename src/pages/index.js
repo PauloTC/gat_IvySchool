@@ -17,7 +17,7 @@ import LatestNews from '../components/home/latest-news'
 import OpenDay from '../components/home/open-day'
 import CourseCollection from '../components/home/course-collection'
 import OpenAdmision from '../components/home/open-admision'
-
+import ExploreCollege from '../components/home/explore-college'
 import { makeStyles } from '@material-ui/styles'
 
 
@@ -76,6 +76,7 @@ const IndexPage = () => {
             <OpenDay />
             <CourseCollection />
             <OpenAdmision />
+            <ExploreCollege />
         </Layout>
     )
 }
