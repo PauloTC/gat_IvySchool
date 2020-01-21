@@ -18,6 +18,11 @@ const useStyles = makeStyles({
         width: 40,
         height: 40,
         position: 'relative'
+    },
+    item: {
+        height : "100%",
+        borderRadius: '50%',
+        background: "#464865"
     }
 })
 
@@ -47,7 +52,7 @@ const ProgramsBar = () => {
                                 programs.map((item) => {
                                     return (
                                         <Grid item container alignItems="center" spacing={3} sm={4} >
-                                            <Grid item container alignItems="center" justify="center" xs={3} >
+                                            <Grid  className={ classes.item } item container alignItems="center" justify="center" xs={3} >
                                                 <Box display="flex" className={ classes.containericon } position="relative" >
                                                     <Icon className={ classes.icon } />
                                                 </Box>

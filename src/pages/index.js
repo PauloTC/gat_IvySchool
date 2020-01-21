@@ -44,7 +44,7 @@ const useStyles = makeStyles({
     containerAbsolute: {
         position: 'absolute',
         top: '50%',
-        transform: 'translateY(-50%)',
+        transform: 'translateY(-30%)',
         left: 0,
         right: 0
     }
@@ -65,7 +65,7 @@ const IndexPage = () => {
                         </Typography>
                         <Fab variant="extended" size="large" color="primary" >
                             <Typography>
-                                <Box fontSize={14} fontWeight={300}> Visit campus </Box>
+                                <Box fontSize={14}  px={ 2 }  > Visit campus </Box>
                             </Typography>
                         </Fab>
                     </CardContent>

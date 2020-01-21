@@ -24,6 +24,10 @@ const useStyles = makeStyles({
         width: 15,
         height: 15
     },
+    box:{
+        display : 'flex',
+        justifyContent: 'space-around'
+    },
     image: {
         position: 'absolute',
         top: 0,
@@ -84,22 +88,22 @@ const OpenDay = () => {
                 <Typography  variant="h5" >
                      <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
                 </Typography>
-                <Grid container  justify="space-around" >
+                <Box className={ classes.box  } >
                     {
                         info.map( i => {
                             return (
-                                <Grid item md={3} >
+                                <Box flex="1" >
                                     <Typography variant="h3" >
                                         <Box  textAlign="center" color="#fff"  fontWeight={600} > {i.title } </Box>
                                     </Typography>
                                     <Typography variant="body1" >
                                         <Box  textAlign="center" color="#fff" > { i.subtitle } </Box>
                                     </Typography>
-                                </Grid>
+                                </Box>
                             )
                         } )
                     }
-                </Grid>
+                </Box>
                 <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
                     <Grid container >
 

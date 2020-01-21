@@ -11,9 +11,9 @@ import Fab from '@material-ui/core/Fab';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import {
-    Slide
-} from '@material-ui/core';
+
+import logo from '../images/logo.png'
+
 
 const useStyles = makeStyles({
     text: {
@@ -25,7 +25,15 @@ const useStyles = makeStyles({
         textDecoration: 'none'
     },
     header: {
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
+        position: "absolute"
+    },
+    image: {
+        margin: 0,
+        marginRight: 10
+    },
+    flex: {
+        display: 'flex'
     }
 })
 
@@ -58,7 +66,7 @@ const Header = ()=> {
                                             <Box color="#e0e0e0"  ml={2} fontSize={14} fontWeight={300}>hello@eduma.com</Box>
                                         </Typography>
                                     </Grid>
-                                    <Grid item md={3} container justify="flex-end" >
+                                    <Grid item container md={3}  justify="flex-end" >
                                         <Button>
                                             <Box color="#e0e0e0" fontSize={14} fontWeight={300}>Alumno</Box>
                                         </Button>
@@ -77,16 +85,18 @@ const Header = ()=> {
                         
                         <Box  mt={3} >
                             <Container maxWidth="xl">
-                                <Grid container justify="space-between">
+                                <Grid container alignItems="center" justify="space-between">
 
-                                    <Grid item  md={2} >
+                                    <Grid item  md={3} container alignItems="center"   >
+                                        <img className={ classes.image }  src={ logo } alt=""/>
                                         <Typography>
                                             <Box fontSize={30} fontWeight={600} > Ivy School</Box>
+                                            <Box textAlign="right" fontSize={12} fontWeight={300}>  By Paulo Tejada </Box>
                                         </Typography>
                                     </Grid>
 
 
-                                    <Grid item md={10} >
+                                    <Grid  item md={ 9 } >
 
                                         <Box display="flex" justifyContent="flex-end"  alignItems="center"  >
                                             {
@@ -105,7 +115,7 @@ const Header = ()=> {
 
                                             <Fab variant="extended" size="medium" color="primary" >
                                                 <Typography>
-                                                    <Box fontSize={14} fontWeight={300}> Apply Now </Box>
+                                                    <Box px={ 2 } fontSize={14}> Apply Now </Box>
                                                 </Typography>
                                             </Fab>
                                         </Box>
