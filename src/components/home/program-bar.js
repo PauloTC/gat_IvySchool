@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     },
     item: {
         height : "100%",
-        borderRadius: 50,
+        borderRadius: '50%',
         background: "#464865"
     }
 })
