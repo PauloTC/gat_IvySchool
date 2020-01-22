@@ -88,41 +88,20 @@ const OpenDay = () => {
                 <Typography  variant="h5" >
                      <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
                 </Typography>
-                <Box display="flex" >
-                    <Box flex="1" >
-                        <Typography variant="h3" >
-                            <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
-                        </Typography>
-                        <Typography variant="body1" >
-                            <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
-                        </Typography>
-                    </Box>
-                    <Box flex="1" >
-                        <Typography variant="h3" >
-                            <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
-                        </Typography>
-                        <Typography variant="body1" >
-                            <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
-                        </Typography>
-                    </Box>
-                    <Box flex="1" >
-                        <Typography variant="h3" >
-                            <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
-                        </Typography>
-                        <Typography variant="body1" >
-                            <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
-                        </Typography>
-                    </Box>
-                    <Box flex="1" >
-                        <Typography variant="h3" >
-                            <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
-                        </Typography>
-                        <Typography variant="body1" >
-                            <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
-                        </Typography>
-                    </Box>
-                    
-                </Box>
+
+                <Typography variant="h3" >
+                    <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
+                </Typography>
+                <Typography variant="body1" >
+                    <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
+                </Typography>
+                <Typography variant="h3" >
+                    <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
+                </Typography>
+                <Typography variant="body1" >
+                    <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
+                </Typography>
+               
 
                     {/* {
                         info.map( i => {
