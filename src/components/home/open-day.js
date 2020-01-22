@@ -88,7 +88,7 @@ const OpenDay = () => {
                 <Typography  variant="h5" >
                      <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
                 </Typography>
-                <div className={ classes.box  } >
+                <div>
                     <Box flex="1" >
                         <Typography variant="h3" >
                             <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
@@ -121,6 +121,9 @@ const OpenDay = () => {
                             <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
                         </Typography>
                     </Box>
+                    
+                </div>
+
                     {/* {
                         info.map( i => {
                             return (
@@ -135,7 +138,7 @@ const OpenDay = () => {
                             )
                         } )
                     } */}
-                </div>
+
                 <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
                     <Grid container >
 
