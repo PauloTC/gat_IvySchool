@@ -49,6 +49,7 @@ const ExploreCollege = () => {
                             </Typography>
                         </Grid>
                     </Grid>
+                    
                 </Container>
             </section>
         </Box>         
