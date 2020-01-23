@@ -90,7 +90,15 @@ const OpenDay = () => {
                         <Typography  variant="h5" >
                             <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
                         </Typography>
-                        <Box display="flex" >
+                        <Box display="flex" flexDirection="row" >
+                            <Box display="flex"  flexDirection="column" >
+                                <Typography variant="h3" >
+                                    <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
+                                </Typography>
+                                <Typography variant="body1" >
+                                    <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
+                                </Typography>
+                            </Box>
                             <Box display="flex"  flexDirection="column" >
                                 <Typography variant="h3" >
                                     <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
@@ -100,22 +108,6 @@ const OpenDay = () => {
                                 </Typography>
                             </Box>
                         </Box>
-                    
-
-                            {/* {
-                                info.map( i => {
-                                    return (
-                                        <Box flex="1" >
-                                            <Typography variant="h3" >
-                                                <Box  textAlign="center" color="#fff"  fontWeight={600} > {i.title } </Box>
-                                            </Typography>
-                                            <Typography variant="body1" >
-                                                <Box  textAlign="center" color="#fff" > { i.subtitle } </Box>
-                                            </Typography>
-                                        </Box>
-                                    )
-                                } )
-                            } */}
 
                         <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
                             <Grid container >
