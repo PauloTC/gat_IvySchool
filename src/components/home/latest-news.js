@@ -62,7 +62,7 @@ const LatestNews = () => {
                         <Grid item md={4} >
                             <Box>
                                 <Card  className={ classes.card } >
-                                    <CardMedia className={ classes.image } image={ image } />
+                                    {/* <CardMedia className={ classes.image } image={ image } /> */}
                                     <CardContent  className={ classes.content } >
                                         <Box mb={2} >
                                             <Typography variant="subtitle1" > 
