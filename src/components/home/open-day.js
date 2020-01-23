@@ -85,7 +85,7 @@ const OpenDay = () => {
                     <CardMedia className={ classes.image }  image={  image }  />
                     <Container maxWidth="xl" >
                         <Typography variant="body2" >
-                            <Box textAlign="center" color="#fff" >Our Goals</Box>
+                            <Box >Our Goals</Box>
                         </Typography>
                         <Typography  variant="h5" >
                             <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
@@ -93,18 +93,18 @@ const OpenDay = () => {
                         <Box display="flex" flexDirection="row" >
                             <Box display="flex"  flexDirection="column" >
                                 <Typography variant="h3" >
-                                    <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
+                                    <Box color="#fff"  fontWeight={600} > 98% </Box>
                                 </Typography>
                                 <Typography variant="body1" >
-                                    <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
+                                    <Box color="#fff" > of class of 2018 </Box>
                                 </Typography>
                             </Box>
                             <Box display="flex"  flexDirection="column" >
                                 <Typography variant="h3" >
-                                    <Box  textAlign="center" color="#fff"  fontWeight={600} > 98% </Box>
+                                    <Box color="#fff"  fontWeight={600} > 98% </Box>
                                 </Typography>
                                 <Typography variant="body1" >
-                                    <Box  textAlign="center" color="#fff" > of class of 2018 </Box>
+                                    <Box color="#fff" > of class of 2018 </Box>
                                 </Typography>
                             </Box>
                         </Box>
