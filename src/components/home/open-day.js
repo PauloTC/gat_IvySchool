@@ -2,9 +2,14 @@ import React, { Fragment } from 'react'
 import {
     CardMedia,
     Container,
+    Fab,
+    Box,
     Typography,
+    Grid,
+    CardContent,
+    TextField
 } from '@material-ui/core';
-import { Grid , Box} from "@chakra-ui/core";
+import NumberFigures from './numbers-figures'
 import { makeStyles } from '@material-ui/styles'
 import Check from  '../../assets/select.svg'
 import image from '../../images/students.jpeg'
@@ -76,98 +81,92 @@ const OpenDay = () => {
 
     return (
         <Fragment>
-            <Container maxWidth="xl" >
-                <Box position="relative" mb={30} pb={ 40 } pt={ 8 } className= { classes.container } >
-                    <CardMedia className={ classes.image }  image={  image }  />
-                    <Container maxWidth="xl" >
-                        <Typography variant="body2" >
-                            <Box textAlign="center" color="#fff" >Our Goals</Box>
-                        </Typography>
-                        <Typography  variant="h5" >
-                            <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
-                        </Typography>
-                        
-                        <Grid templateColumns="repeat(5, 1fr)" gap={6}>
-                            <Box w="100%" h="10" bg="blue.500" />
-                            <Box w="100%" h="10" bg="blue.500" />
-                            <Box w="100%" h="10" bg="blue.500" />
-                            <Box w="100%" h="10" bg="blue.500" />
-                            <Box w="100%" h="10" bg="blue.500" />
-                        </Grid>
 
-                        {/* <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
-                            <Grid container >
+            <Box position="relative" mb={30} pb={ 40 } pt={ 8 } className= { classes.container } >
+                <CardMedia className={ classes.image }  image={  image }  />
+                <Container maxWidth="xl" >
+                    <Typography variant="body2" >
+                        <Box textAlign="center" color="#fff" >Our Goals</Box>
+                    </Typography>
+                    <Typography  variant="h5" >
+                        <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
+                    </Typography>
+                    
+                    <NumberFigures />
 
-                                <Grid className={ classes.blue } item md={4} >
-                                    <Box py={5} >
-                                        <Typography>
-                                            <Box mb={3} fontWeight={600} color="#fff" textAlign="center" > WORKING HOURS </Box>
-                                        </Typography>
-                                        <Box px={5}  display="flex" flexDirection="column" >                          
-                                            {
-                                                hours.map( h => {
-                                                    return (
-                                                        <Box pb={3} display="flex" justifyContent="space-between">
-                                                            <Typography> 
-                                                                <Box  color="#707186" > { h.day } </Box>
-                                                            </Typography>
-                                                            <Typography>
-                                                                <Box  color="#3AC569" > { h.hours } </Box>
-                                                            </Typography>
-                                                        </Box>
-                                                    )
-                                                } )
-                                            }
-                                        </Box>
+
+                    <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
+                        <Grid container >
+
+                            <Grid className={ classes.blue } item md={4} >
+                                <Box py={5} >
+                                    <Typography>
+                                        <Box mb={3} fontWeight={600} color="#fff" textAlign="center" > WORKING HOURS </Box>
+                                    </Typography>
+                                    <Box px={5}  display="flex" flexDirection="column" >                          
+                                        {
+                                            hours.map( h => {
+                                                return (
+                                                    <Box pb={3} display="flex" justifyContent="space-between">
+                                                        <Typography> 
+                                                            <Box  color="#707186" > { h.day } </Box>
+                                                        </Typography>
+                                                        <Typography>
+                                                            <Box  color="#3AC569" > { h.hours } </Box>
+                                                        </Typography>
+                                                    </Box>
+                                                )
+                                            } )
+                                        }
                                     </Box>
-                                    
-                                    
-                                </Grid>
+                                </Box>
+                                
+                                
+                            </Grid>
 
-                                <Grid className={ classes.steelblue } item md={4} >
-                                    <Box py={ 5 } >
-                                        <Typography>
-                                            <Box mb={4} fontWeight={600} color="#fff" textAlign="center" > WHY CHOOSE US </Box>
-                                        </Typography>
+                            <Grid className={ classes.steelblue } item md={4} >
+                                <Box py={ 5 } >
+                                    <Typography>
+                                        <Box mb={4} fontWeight={600} color="#fff" textAlign="center" > WHY CHOOSE US </Box>
+                                    </Typography>
+                                    <Box px={5} display="flex" flexDirection="column" >
+                                        {
+                                            choose.map( c => {
+                                                return (
+                                                    <Box mb={2} display="flex" alignItems="center" >
+                                                        <Box  display="flex" mr={ 2 } >
+                                                            <Check  className={ classes.icon } />
+                                                        </Box>
+                                                        <Typography> 
+                                                            <Box  color="#AEAEAE" > { c } </Box>
+                                                        </Typography>
+                                                    </Box>
+                                                )
+                                            } )
+                                        }
+                                    </Box>
+                                </Box>
+                            </Grid>
+
+                            <Grid className={ classes.blue } item md={4} >
+                                <Box py={ 5 } >
+                                    <Typography>
+                                        <Box mb={4} fontWeight={600} fontWeight={600} color="#fff" textAlign="center" > SUSCRIBE HERE </Box>
+                                    </Typography>
+                                    <form>
                                         <Box px={5} display="flex" flexDirection="column" >
-                                            {
-                                                choose.map( c => {
-                                                    return (
-                                                        <Box mb={2} display="flex" alignItems="center" >
-                                                            <Box  display="flex" mr={ 2 } >
-                                                                <Check  className={ classes.icon } />
-                                                            </Box>
-                                                            <Typography> 
-                                                                <Box  color="#AEAEAE" > { c } </Box>
-                                                            </Typography>
-                                                        </Box>
-                                                    )
-                                                } )
-                                            }
+                                            <TextField id="outlined-basic" label="Name" variant="outlined" />
+                                            <TextField id="outlined-basic" label="Email" variant="outlined" />
+                                            <TextField id="outlined-basic" label="Phone" variant="outlined" />
                                         </Box>
-                                    </Box>
-                                </Grid>
+                                    </form>
+                                </Box>
+                            </Grid>
 
-                                <Grid className={ classes.blue } item md={4} >
-                                    <Box py={ 5 } >
-                                        <Typography>
-                                            <Box mb={4} fontWeight={600} fontWeight={600} color="#fff" textAlign="center" > SUSCRIBE HERE </Box>
-                                        </Typography>
-                                        <form>
-                                            <Box px={5} display="flex" flexDirection="column" >
-                                                <TextField id="outlined-basic" label="Name" variant="outlined" />
-                                                <TextField id="outlined-basic" label="Email" variant="outlined" />
-                                                <TextField id="outlined-basic" label="Phone" variant="outlined" />
-                                            </Box>
-                                        </form>
-                                    </Box>
-                                </Grid> */}
-
-                            {/* </Grid> */}
-                        {/* </Box> */}
-                    </Container>
-                </Box>
-            </Container>
+                        </Grid>
+                    </Box>
+                </Container>
+            </Box>
         </Fragment>
     )
 }
