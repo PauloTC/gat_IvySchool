@@ -2,13 +2,9 @@ import React, { Fragment } from 'react'
 import {
     CardMedia,
     Container,
-    Fab,
-    Box,
     Typography,
-    Grid,
-    CardContent,
-    TextField
 } from '@material-ui/core';
+import { Grid , Box} from "@chakra-ui/core";
 import { makeStyles } from '@material-ui/styles'
 import Check from  '../../assets/select.svg'
 import image from '../../images/students.jpeg'
@@ -91,18 +87,15 @@ const OpenDay = () => {
                             <Box mb={ 4 } fontWeight={600}  textAlign="center" color="#3AC569" >Open Day 2018</Box>
                         </Typography>
                         
-                        <Box display="flex" flexDirection="row" >
-                            <Box display="flex"  flexDirection="column" >
-                                <Typography variant="h3" >
-                                    <Box color="#fff"  fontWeight={600} > 98% </Box>
-                                </Typography>
-                                <Typography variant="body1" >
-                                    <Box color="#fff" > of class of 2018 </Box>
-                                </Typography>
-                            </Box>
-                        </Box>
+                        <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+                            <Box w="100%" h="10" bg="blue.500" />
+                            <Box w="100%" h="10" bg="blue.500" />
+                            <Box w="100%" h="10" bg="blue.500" />
+                            <Box w="100%" h="10" bg="blue.500" />
+                            <Box w="100%" h="10" bg="blue.500" />
+                        </Grid>
 
-                        <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
+                        {/* <Box maxWidth={1150}  position="absolute" left={0}  right={0} margin="auto" bottom={-200} >
                             <Grid container >
 
                                 <Grid className={ classes.blue } item md={4} >
@@ -168,10 +161,10 @@ const OpenDay = () => {
                                             </Box>
                                         </form>
                                     </Box>
-                                </Grid>
+                                </Grid> */}
 
-                            </Grid>
-                        </Box>
+                            {/* </Grid> */}
+                        {/* </Box> */}
                     </Container>
                 </Box>
             </Container>
